@@ -1,10 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ToDoList.Domain.ViewModels.Task;
+using ToDoList.Service.Intefaces;
 
 namespace ToDoList.Controllers
 {
     public class TaskController : Controller
     {
+        private readonly ITaskService _taskService;
+
+        public TaskController(ITaskService taskService)
+        {
+            _taskService = taskService;
+        }
 
         public IActionResult Index()
         {
@@ -14,7 +21,10 @@ namespace ToDoList.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateTaskViewModel model)
         {
-            return Ok();
+            var response = await _taskService.Create(model);
+            if(response.StatusCode == Domain.Enum.StatusCode.OK)
+                return Ok(new {descriptions = response.Description});
+            return BadRequest( new {description =  response.Description});
         }
 
     }

@@ -394,3 +394,5 @@ C:\D\Programming\C#\Projects\ToDoList\ToDoList\bin\Debug\net6.0\tr\Microsoft.Cod
 C:\D\Programming\C#\Projects\ToDoList\ToDoList\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\D\Programming\C#\Projects\ToDoList\ToDoList\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\D\Programming\C#\Projects\ToDoList\ToDoList\obj\Debug\net6.0\ToDoList.MvcApplicationPartsAssemblyInfo.cs
+C:\D\Programming\C#\Projects\ToDoList\ToDoList\bin\Debug\net6.0\ToDoList.Service.dll
+C:\D\Programming\C#\Projects\ToDoList\ToDoList\bin\Debug\net6.0\ToDoList.Service.pdb

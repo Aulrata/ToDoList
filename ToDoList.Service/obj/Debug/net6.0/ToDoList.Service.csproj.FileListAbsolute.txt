@@ -1,0 +1,17 @@
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.csproj.AssemblyReference.cache
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.AssemblyInfoInputs.cache
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.AssemblyInfo.cs
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.csproj.CoreCompileInputs.cache
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.Service.deps.json
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.Service.dll
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.Service.pdb
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.DAL.dll
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.Domain.dll
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.DAL.pdb
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\bin\Debug\net6.0\ToDoList.Domain.pdb
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.csproj.CopyComplete
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.dll
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\refint\ToDoList.Service.dll
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ToDoList.Service.pdb
+C:\D\Programming\C#\Projects\ToDoList\ToDoList.Service\obj\Debug\net6.0\ref\ToDoList.Service.dll

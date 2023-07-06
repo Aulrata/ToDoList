@@ -1321,6 +1321,21 @@
         "runtime": {
           "bin/placeholder/ToDoList.Domain.dll": {}
         }
+      },
+      "ToDoList.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "ToDoList.DAL": "1.0.0",
+          "ToDoList.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ToDoList.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ToDoList.Service.dll": {}
+        }
       }
     }
   },
@@ -3863,6 +3878,11 @@
       "type": "project",
       "path": "../ToDoList.Domain/ToDoList.Domain.csproj",
       "msbuildProject": "../ToDoList.Domain/ToDoList.Domain.csproj"
+    },
+    "ToDoList.Service/1.0.0": {
+      "type": "project",
+      "path": "../ToDoList.Service/ToDoList.Service.csproj",
+      "msbuildProject": "../ToDoList.Service/ToDoList.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3870,7 +3890,8 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.19",
       "Microsoft.EntityFrameworkCore >= 7.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.8",
-      "ToDoList.DAL >= 1.0.0"
+      "ToDoList.DAL >= 1.0.0",
+      "ToDoList.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3909,6 +3930,9 @@
           "projectReferences": {
             "C:\\D\\Programming\\C#\\Projects\\ToDoList\\ToDoList.DAL\\ToDoList.DAL.csproj": {
               "projectPath": "C:\\D\\Programming\\C#\\Projects\\ToDoList\\ToDoList.DAL\\ToDoList.DAL.csproj"
+            },
+            "C:\\D\\Programming\\C#\\Projects\\ToDoList\\ToDoList.Service\\ToDoList.Service.csproj": {
+              "projectPath": "C:\\D\\Programming\\C#\\Projects\\ToDoList\\ToDoList.Service\\ToDoList.Service.csproj"
             }
           }
         }

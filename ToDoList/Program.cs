@@ -1,9 +1,19 @@
 using Microsoft.EntityFrameworkCore;
 using ToDoList.DAL;
+using ToDoList.DAL.Intefaces;
+using ToDoList.DAL.Repositories;
+using ToDoList.Domain.Entity;
+using ToDoList.Service.Implementations;
+using ToDoList.Service.Intefaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+builder.Services.AddScoped<IBaseRepository<TaskEntity>, TaskRepository>();
+
+builder.Services.AddScoped<ITaskService, TaskService>();
+
 
 var connectionString = builder.Configuration.GetConnectionString("MSSQL");
 
