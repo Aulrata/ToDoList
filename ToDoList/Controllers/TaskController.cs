@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using ToDoList.Domain.ViewModels.Task;
 
 namespace ToDoList.Controllers
 {
@@ -11,6 +11,11 @@ namespace ToDoList.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateTaskViewModel model)
+        {
+            return Ok();
+        }
 
     }
 }
