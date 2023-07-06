@@ -23,7 +23,7 @@ namespace ToDoList.Controllers
         {
             var response = await _taskService.Create(model);
             if(response.StatusCode == Domain.Enum.StatusCode.OK)
-                return Ok(new {descriptions = response.Description});
+                return Ok(new {description = response.Description});
             return BadRequest( new {description =  response.Description});
         }
 
