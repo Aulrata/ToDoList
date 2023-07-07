@@ -11,6 +11,7 @@ namespace ToDoList.Service.Intefaces
 
         Task<IBaseResponse<IEnumerable<TaskViewModel>>> GetTasks(TaskFilter filter);
 
+        Task<IBaseResponse<bool>> EndTask(int id);
 
     }
 }
