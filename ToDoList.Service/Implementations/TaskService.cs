@@ -3,6 +3,8 @@ using Microsoft.Extensions.Logging;
 using ToDoList.DAL.Intefaces;
 using ToDoList.Domain.Entity;
 using ToDoList.Domain.Enum;
+using ToDoList.Domain.Extenstions;
+using ToDoList.Domain.Filters.Task;
 using ToDoList.Domain.Response;
 using ToDoList.Domain.ViewModels.Task;
 using ToDoList.Service.Intefaces;
@@ -61,6 +63,42 @@ namespace ToDoList.Service.Implementations
                 _logger.LogError(ex, $"[TaskService.Create]: {ex.Message}");
                 return new BaseResponse<TaskEntity>()
                 {
+                    Description = $"{ex.Message}",
+                    StatusCode = StatusCode.InternalServerError,
+                };
+            }
+        }
+
+        public async Task<IBaseResponse<IEnumerable<TaskViewModel>>> GetTasks(TaskFilter filter)
+        {
+            try
+            {
+                var tasks = await _taskRepository.GetAll()
+                    .WhereIf(!string.IsNullOrWhiteSpace(filter.Name),x=>x.Name == filter.Name)
+                    .WhereIf(filter.Priority.HasValue, x=>x.Priority == filter.Priority)
+                    .Select(x => new TaskViewModel()
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        Description = x.Description,
+                        IsDone = x.IsDone == true ? "Готова" : "Не готова",
+                        Priority = x.Priority.GetDisplayName(),
+                        Created = x.Created.ToLongDateString(),
+                    })
+                    .ToListAsync();
+
+                return new BaseResponse<IEnumerable<TaskViewModel>>()
+                {
+                    StatusCode = StatusCode.OK,
+                    Data = tasks,
+                };
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex, $"[TaskService.GetTasks]: {ex.Message}");
+                return new BaseResponse<IEnumerable<TaskViewModel>> ()
+                { 
                     Description = $"{ex.Message}",
                     StatusCode = StatusCode.InternalServerError,
                 };

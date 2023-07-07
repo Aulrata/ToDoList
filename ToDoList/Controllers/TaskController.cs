@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ToDoList.Domain.Filters.Task;
 using ToDoList.Domain.ViewModels.Task;
 using ToDoList.Service.Intefaces;
 
@@ -25,6 +26,14 @@ namespace ToDoList.Controllers
             if(response.StatusCode == Domain.Enum.StatusCode.OK)
                 return Ok(new {description = response.Description});
             return BadRequest( new {description =  response.Description});
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> TaskHandler(TaskFilter filter)
+        {
+            var response = await _taskService.GetTasks(filter);
+            
+            return Json(new {data = response.Data });
         }
 
     }
