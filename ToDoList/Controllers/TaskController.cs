@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ToDoList.Domain.Filters.Task;
+using ToDoList.Domain.Utils;
 using ToDoList.Domain.ViewModels.Task;
 using ToDoList.Service.Intefaces;
 
@@ -54,6 +55,20 @@ namespace ToDoList.Controllers
             var response = await _taskService.GetTasks(filter);
             
             return Json(new {data = response.Data });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CalculateCompletedTasks()
+        {
+            var response = await _taskService.CalculateCompletedTasks();
+
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                var csvService = new CsvBaseService<IEnumerable<TaskViewModel>>();
+                var uploadFile = csvService.UploadFiles(response.Data);
+                return File(uploadFile, "text/csv", $"Статистика за {DateTime.Now.ToLongDateString()}.csv");
+            }
+            return BadRequest(new {description = response.Description });
         }
 
     }

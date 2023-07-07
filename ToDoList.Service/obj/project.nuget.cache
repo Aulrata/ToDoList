@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LbqAL7aMdM09EvucStYAsQfp7m0Bnmiu24j5bmZwyj/3nFzy61f514S+ePgm+apwJcuaX6P9Pg8d+Skh/pb5QA==",
+  "dgSpecHash": "AIeMR04hbIPVq2/m4D0WhkmOteGNW8Ea75y12QmM6uOWrHZdDLFUsHLr5UBZronG1EVo5l9Gd2L2KLx/c+QlKw==",
   "success": true,
   "projectFilePath": "C:\\D\\Programming\\C#\\Projects\\ToDoList\\ToDoList.Service\\ToDoList.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kosty\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.8\\microsoft.entityframeworkcore.7.0.8.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.8\\microsoft.entityframeworkcore.abstractions.7.0.8.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.8\\microsoft.entityframeworkcore.analyzers.7.0.8.nupkg.sha512",

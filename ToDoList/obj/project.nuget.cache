@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IFVrfgyRT6Uw6N16xL6QfVM8bWw0zjVnNAfp6kp7CfqKbj5RxMqJdgeLtbJHUTdnH6ndjQAAY96+f08wIfcskA==",
+  "dgSpecHash": "mlPnUukRwdHVNJmtQp+kYeDLbbdcT+SXZxJHLRTLkJzLZnKgNlg3fmucLA9YzwBIDN1hk9cswcIrK3+x4Twblw==",
   "success": true,
   "projectFilePath": "C:\\D\\Programming\\C#\\Projects\\ToDoList\\ToDoList\\ToDoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kosty\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\kosty\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.19\\microsoft.aspnetcore.mvc.razor.extensions.6.0.19.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\6.0.19\\microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.19.nupkg.sha512",
     "C:\\Users\\kosty\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.19\\microsoft.aspnetcore.razor.language.6.0.19.nupkg.sha512",

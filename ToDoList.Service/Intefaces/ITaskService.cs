@@ -15,5 +15,7 @@ namespace ToDoList.Service.Intefaces
 
         Task<IBaseResponse<IEnumerable<TaskCompletedViewModel>>> GetCompletedTasks();
 
+        Task<IBaseResponse<IEnumerable<TaskViewModel>>> CalculateCompletedTasks();
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Globalization;
 using ToDoList.DAL.Intefaces;
 using ToDoList.Domain.Entity;
 using ToDoList.Domain.Enum;
@@ -20,6 +21,40 @@ namespace ToDoList.Service.Implementations
         {
             _taskRepository = taskRepository;
             _logger = logger;
+        }
+
+        public async Task<IBaseResponse<IEnumerable<TaskViewModel>>> CalculateCompletedTasks()
+        {
+            try
+            {
+                var tasks = await _taskRepository.GetAll()
+                    .Where(x => x.Created.Date == DateTime.Today)
+                    .Select(x => new TaskViewModel()
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        IsDone = x.IsDone ==true ? "Готово": "Не готова",
+                        Description = x.Description,
+                        Priority = x.Priority.ToString(),
+                        Created = x.Created.ToString(CultureInfo.InvariantCulture),
+                    }).ToListAsync();
+
+                return new BaseResponse<IEnumerable<TaskViewModel>>()
+                {
+                    Data = tasks,
+                    StatusCode = StatusCode.OK,
+                };
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex, $"[TaskService.CalculateCompletedTasks]: {ex.Message}");
+                return new BaseResponse<IEnumerable<TaskViewModel>>()
+                {
+                    Description = $"{ex.Message}",
+                    StatusCode = StatusCode.InternalServerError,
+                };
+            }
         }
 
         public async Task<IBaseResponse<TaskEntity>> Create(CreateTaskViewModel model)
